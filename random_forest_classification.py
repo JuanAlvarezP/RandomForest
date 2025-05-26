@@ -47,9 +47,6 @@ print(X_test)
 classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 3500)  # Usamos 'entropy' como criterio
 classifier.fit(X_train, y_train)  # Ajusta el modelo a los datos de entrenamiento
 
-# Predicción de un nuevo resultado (Ejemplo: Edad = 30, Salario = 87000)
-resultado = classifier.predict(sc.transform([[30, 87000]]))  # Predice si comprará o no
-print(f"Predicción para edad 30 y salario 87000: {resultado}")
 
 # Predicción sobre el conjunto de prueba
 y_pred = classifier.predict(X_test)  # Predice las etiquetas para el conjunto de prueba
